@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude El Tio Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root{
+    --bg:#f7f6f2;
+    --text:#2b2a26;
+    --text-muted:#6b6a63;
+    --accent:#3f6b4d;
+    --accent-soft:#e7ede8;
+    --border:#e2ded4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:0 20px;
+  }
+  .wrap{max-width:700px;margin:0 auto;padding:56px 0 80px;}
+  header{display:flex;flex-direction:column;gap:6px;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--border);}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:2.1rem;margin:2px 0 4px;}
+  .meta{color:var(--text-muted);font-size:0.9rem;}
+  h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.2rem;margin:2.4em 0 0.6em;display:flex;align-items:baseline;gap:0.6em;}
+  h2 .num{font-family:"IBM Plex Mono",monospace;font-size:0.85rem;color:var(--accent);font-weight:500;}
+  p{margin:0.9em 0;max-width:64ch;}
+  a{color:var(--accent);}
+  table{width:100%;border-collapse:collapse;margin:1.2em 0 1.6em;font-size:0.92rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{font-family:"IBM Plex Mono",monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);font-weight:500;}
+  .table-wrap{overflow-x:auto;}
+  .callout{background:var(--accent-soft);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:1.6em 0;font-size:0.95rem;}
+  .callout .label{font-family:"IBM Plex Mono",monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px;}
+  footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--border);color:var(--text-muted);font-size:0.85rem;}
+  footer a{color:var(--text-muted);text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Legal · Claude El Tio</span>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective September 11, 2026</div>
+  </header>
+
+  <p>
+    <strong>Claude El Tio</strong> is a private automation integration, built and operated by
+    Salvador (contact: <a href="mailto:peluchorango@gmail.com">peluchorango@gmail.com</a>), that
+    publishes short-form video content to a single TikTok account ("El Tio") on a schedule.
+    This policy explains the limited data the integration handles and how it is used.
+  </p>
+
+  <h2><span class="num">01</span> Data this app accesses</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Data</th><th>Source</th><th>Why</th></tr>
+      <tr>
+        <td>OAuth access &amp; refresh tokens</td>
+        <td>TikTok Login Kit, issued when the account owner authorizes the app</td>
+        <td>Required to call TikTok's Content Posting API on the owner's behalf</td>
+      </tr>
+      <tr>
+        <td>Basic account identifiers (open id, display name)</td>
+        <td>TikTok API, returned after authorization</td>
+        <td>Confirms which account a scheduled post is being published to</td>
+      </tr>
+      <tr>
+        <td>Video files &amp; captions</td>
+        <td>Prepared directly by the account owner</td>
+        <td>The content that gets uploaded to TikTok</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2><span class="num">02</span> What is not collected</h2>
+  <p>
+    This integration does not read TikTok direct messages, does not access other users'
+    accounts or content, does not collect analytics on viewers, and does not use TikTok data
+    for advertising, profiling, or any purpose other than publishing the owner's own videos.
+  </p>
+
+  <h2><span class="num">03</span> How data is stored</h2>
+  <p>
+    Access tokens are stored only within the owner's private automation environment
+    (a self-hosted workflow platform) and are used solely to make authenticated calls to
+    TikTok's API at the moment a scheduled video is published. Tokens are not shared, sold,
+    or exposed to any third party.
+  </p>
+
+  <h2><span class="num">04</span> Retention &amp; deletion</h2>
+  <p>
+    Tokens are retained only for as long as the integration remains active. The account owner
+    can delete all stored data at any time by revoking the app's access in TikTok's account
+    settings, which also invalidates the associated tokens.
+  </p>
+
+  <h2><span class="num">05</span> Owner's rights</h2>
+  <p>
+    Because this integration operates on a single, owner-authorized account, there are no
+    third-party end users whose data is processed. The account owner may request details
+    about, or deletion of, any data this integration holds by writing to the contact address
+    below.
+  </p>
+
+  <div class="callout">
+    <span class="label">Contact</span>
+    Privacy questions or data-deletion requests:
+    <a href="mailto:peluchorango@gmail.com">peluchorango@gmail.com</a>.
+  </div>
+
+  <footer>
+    Claude El Tio — internal content-publishing automation for the "El Tio" TikTok account.
+    See also the <a href="terms.html">Terms of Service</a>.
+  </footer>
+</div>
+</body>
+</html>
